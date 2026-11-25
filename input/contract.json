@@ -1,0 +1,93 @@
+{
+  "format": "jsonl",
+  "version": 1,
+  "tables": {
+    "meters": {
+      "summary": "计量点和共有计量关系",
+      "columns": {
+        "id": "仪表",
+        "feed": "馈线",
+        "firm": "可单独归属的企业，主表为空",
+        "kind": "主表、子表或共表",
+        "members": "涵盖企业",
+        "start": "安装生效日"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "dispatch": {
+      "summary": "响应通知、产品优先及恢复时段",
+      "columns": {
+        "id": "调度",
+        "feed": "指定馈线",
+        "kind": "调度产品",
+        "starts": "响应开始时点",
+        "ends": "响应结束时点",
+        "recovery_to": "恢复窗口终点",
+        "priority": "跨产品次序",
+        "rate": "每千瓦时分",
+        "issued_at": "发出时点"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "reading": {
+      "summary": "日内负荷和气象，各时点有原读与补计",
+      "columns": {
+        "id": "读数行",
+        "meter": "仪表号",
+        "from": "半小时起点",
+        "temp": "气温",
+        "kw": "半小时平均负荷，缺测为空",
+        "known": "上报时间",
+        "ref": "被更正的读数行，可空"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {
+        "meter": "meters.id"
+      }
+    },
+    "production": {
+      "summary": "企业运行、检修、移峰和自有储能的观察",
+      "columns": {
+        "id": "生产或储能记录",
+        "firm": "企业",
+        "from": "时段起点",
+        "to": "时段终点",
+        "state": "生产状态或储能动作",
+        "kw": "储能量平均千瓦，可空",
+        "batch_type": "班次工艺",
+        "known": "资料到达"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {}
+    },
+    "commitments": {
+      "summary": "企业接受的削峰容量和付款状态",
+      "columns": {
+        "id": "业务凭证",
+        "dispatch": "应答调度",
+        "firm": "响应企业",
+        "kw": "承诺或结算参考量",
+        "at": "凭证时点",
+        "state": "已接受、候选、已付或待补测",
+        "payment": "实际付分，未付为空",
+        "ref": "对应的之前凭证，可空"
+      },
+      "key": [
+        "id"
+      ],
+      "refs": {
+        "dispatch": "dispatch.id"
+      }
+    }
+  }
+}

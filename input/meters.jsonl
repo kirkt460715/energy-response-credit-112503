@@ -1,0 +1,6 @@
+{"id": "M1", "feed": "F1", "firm": null, "kind": "主表", "members": ["C1", "C2", "C3"], "start": "2027-06-01"}
+{"id": "M2", "feed": "F1", "firm": "C1", "kind": "子表", "members": ["C1"], "start": "2027-06-01"}
+{"id": "M3", "feed": "F1", "firm": null, "kind": "共表", "members": ["C2", "C3"], "start": "2027-06-01"}
+{"id": "M4", "feed": "F2", "firm": null, "kind": "主表", "members": ["C4", "C5"], "start": "2027-06-01"}
+{"id": "M5", "feed": "F2", "firm": "C4", "kind": "子表", "members": ["C4"], "start": "2027-06-01"}
+{"id": "M6", "feed": "F2", "firm": "C5", "kind": "子表", "members": ["C5"], "start": "2027-06-01"}

@@ -1,0 +1,9 @@
+{"id": "C1", "dispatch": "D1", "firm": "C1", "kw": 80, "at": "2027-06-18T10:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C2", "dispatch": "D2", "firm": "C1", "kw": 65, "at": "2027-06-18T14:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C3", "dispatch": "D2", "firm": "C2", "kw": 60, "at": "2027-06-19T08:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C4", "dispatch": "D1", "firm": "C1", "kw": 76, "at": "2027-06-22T09:00:00+08:00", "state": "已付", "payment": 15500, "ref": "C1"}
+{"id": "C5", "dispatch": "D3", "firm": "C4", "kw": 70, "at": "2027-06-20T10:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C6", "dispatch": "D4", "firm": "C1", "kw": 60, "at": "2027-06-23T10:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C7", "dispatch": "D5", "firm": "C1", "kw": 64, "at": "2027-06-24T10:00:00+08:00", "state": "候选", "payment": null, "ref": null}
+{"id": "C8", "dispatch": "D4", "firm": "C2", "kw": 70, "at": "2027-06-23T12:00:00+08:00", "state": "已接受", "payment": null, "ref": null}
+{"id": "C9", "dispatch": "D5", "firm": "C3", "kw": 40, "at": "2027-06-24T10:00:00+08:00", "state": "候选", "payment": null, "ref": null}
